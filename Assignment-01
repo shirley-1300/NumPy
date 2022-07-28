@@ -1,0 +1,75 @@
+#1 Create a null vector of size 10 but the fifth value which is 1.
+
+import numpy as np
+vec1 = np.zeros(10)
+vec1[4]=1
+print(vec1)
+
+Output: [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+
+#2 Create a vector with values ranging from 10 to 49.
+
+import numpy as np
+vec2 = np.arange(10,50)
+print(vec2)
+
+Output: [10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49]
+
+#3 Create a 3x3 matrix with values ranging from 0 to 8
+
+import numpy as np
+mat1 = np.random.randint(0,9,size=(3,3))
+print(mat1)
+
+Output: [[1 1 5]
+        [6 2 5]
+        [6 0 3]]
+
+#4 Find indices of non-zero elements from [1,2,0,0,4,0]
+
+import numpy as np
+vec3 = np.array([1,2,0,0,4,0])
+print("The non-zero elements are")
+for i in vec3:
+  if i!=0:
+    print(i)
+    
+Output: The non-zero elements are
+1
+2
+4
+
+#5 Create a 10x10 array with random values and find the minimum and maximum values.
+
+import numpy as np
+mat2 = np.random.randint(0,101,size=(10,10))
+print(mat2)
+print("The minimum number is",mat2.min())
+print("The maximum number is",mat2.max())
+
+Output: [[ 46  80  64  10  17  51  71  46  57  80]
+ [ 40  43  67  61  20  56  82  78  12  46]
+ [  2  91  46  72  61  81  84  45  86  97]
+ [100  67  75  19  37  47  34  98  50  15]
+ [ 87  74  48  74  85 100  60  58  17  92]
+ [ 92  95   9  21  48  15  18  62  42  31]
+ [  6  13  66  77   3  42  68  61  69  48]
+ [ 49  81   1  21  72  41  12   6  90 100]
+ [ 49   5  67  18  54  15  43  72  64  59]
+ [  8  43  76  46  82  23  77  28  54  22]]
+The minimum number is 1
+The maximum number is 100
+
+#6 Create a random vector of size 30 and find the mean value.
+
+import numpy as np
+vec4 = np.random.randint(0,100,30)
+print(vec4)
+sum = 0
+for i in vec4:
+  sum = sum + i
+mean = sum/30
+print("The Mean is",mean)
+
+Output:[32  5 15 48 61 84 45 60 18 67 51 99 49 18  2 89 74 56 44 46 24 89 17 53 63 77 29 68 31 28]
+The Mean is 48.06666666666667
